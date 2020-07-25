@@ -46,19 +46,19 @@ public class CompletableFuture<T> extends UnsafeMechanics implements Future<T>, 
          */
         CompletableFuture<?> f = this;
         Completion h;
-        while ((h = f.stack) != null ||
-                (f != this && (h = (f = this).stack) != null)) {
+        while ((h = f.stack) != null || //f一开始是this是主线，后面可能会被赋为h的结果d，即支线，若f.stack有值则执行
+                (f != this && (h = (f = this).stack) != null)) {//若f.stack无值时且f是支线，则回到主线的stack执行
             CompletableFuture<?> d;
             Completion t;
-            if (f.casStack(h, t = h.next)) {
+            if (f.casStack(h, t = h.next)) {//把h.next赋为f.stack，h从栈中拿出去执行，h.next在下次循环中作为f.stack执行
                 if (t != null) {
-                    if (f != this) {
+                    if (f != this) {//若为支线，则把h作为主线的stack执行，原主线stack作为h的next
                         pushStack(h, stack);
                         continue;
                     }
                     h.next = null;    // detach
                 }
-                f = (d = h.tryFire(NESTED)) == null ? this : d;
+                f = (d = h.tryFire(NESTED)) == null ? this : d;//执行若产生了CompletableFuture则作为支线
             }
         }
     }
