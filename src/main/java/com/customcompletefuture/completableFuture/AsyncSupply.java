@@ -49,6 +49,7 @@ final class AsyncSupply<T> extends ForkJoinTask<Void>
                 } catch (Throwable ex) {
                     //把f执行过程产生的异常赋给d的result
                     d.completeThrowable(ex);
+                    System.out.println(d.stack);
                 }
             }
             //完成后处理
