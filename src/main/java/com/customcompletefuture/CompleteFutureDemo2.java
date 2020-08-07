@@ -6,12 +6,14 @@ package com.customcompletefuture;
  */
 public class CompleteFutureDemo2 {
     public static void main(String[] args) {
-//        MyTest2 myTest2 = new MyTest2();
-//        myTest2.completableFutureTest();
+        MyTest2 myTest2 = new MyTest2();
+        myTest2.completableFutureTest();
 //        MyTest3 myTest3 = new MyTest3();
 //        myTest3.completableFutureTest();
-        MyTest4 myTest4 = new MyTest4();
-        myTest4.completableFutureTest();
+//        MyTest4 myTest4 = new MyTest4();
+//        myTest4.completableFutureTest();
+//        AsyncDemo1 asyncDemo1 = new AsyncDemo1();
+//        asyncDemo1.completableFutureTest();
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {

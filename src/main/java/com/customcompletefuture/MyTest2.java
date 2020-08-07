@@ -51,7 +51,9 @@ public class MyTest2 {
             System.out.println(threadSleep);
             System.out.println(s + c);
 //            sleep(Integer.MAX_VALUE);
-            sleep(10000);
+            sleep(1000000);
+            System.out.println(s + c);
+            sleep(1000000);
             return s + c;
         });
         System.out.println(uCompletableFuture.join());
