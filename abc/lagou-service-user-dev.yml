@@ -1,8 +1,4 @@
-spring:
-  application:
-    name: lagou-service-user
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/lagou?useUnicode=true&characterEncoding=utf8
-    username: root
-    password: root
+mysql.url: jdbc:mysql://localhost:3306/lagou?useUnicode=true&characterEncoding=utf8
+mysql.username: root
+mysql.password: root
+
