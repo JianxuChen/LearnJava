@@ -5,4 +5,5 @@ mail.default-encoding: utf-8
 mail.host: smtp.qq.com
 mail.username: 276799845@qq.com
 mail.password: vzxsbanvvwscbjib
-
+gateway.request.limit: 5
+gateway.request.time: 10000
