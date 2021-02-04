@@ -2,7 +2,7 @@ mysql.url: jdbc:mysql://localhost:3306/lagou?useUnicode=true&characterEncoding=u
 mysql.username: root
 mysql.password: root
 mail.default-encoding: utf-8
-mail.host: smtp.126.com
-mail.username: xxx@126.com
-mail.password: xxxxxxxxxx
+mail.host: smtp.qq.com
+mail.username: 276799845@qq.com
+mail.password: CJX244733dlxi
 
